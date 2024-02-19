@@ -1,0 +1,15 @@
+<h1>Result</h1>
+
+
+<% case @result %>
+<% when 'win' %>
+  <p>"Congrats <strong><%= @word %></strong> is a valid English word"</p>
+<% when 'noword' %>
+  <p>Sorry but <strong><%= @word %></strong> doesn't seem to be an English word</p>
+<% when 'nogrid' %>
+  <p>Sorry but <strong><%= @word %></strong> can't be build out from <%= @raw_letters %></p>
+<% else %>
+  <p>"donno"</p>
+<% end %>
+
+<%= link_to 'Play Again!', new_path %>
